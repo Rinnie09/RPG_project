@@ -1,1 +1,101 @@
-print ("hello")
+print (" ")
+print (" ")
+print (" ")
+print (" ")
+print (" ")
+print (" ")
+print (" ")
+print (" ")
+print (" ")
+print (" ")
+print (" ")
+print (" ")
+print ("Hello, welcome to Erin's RPG game. Your decisions will determine the outcome of this adventure. Please enter all inputs as lowercase.")
+print (" ")
+print ("*You're responsible for erraticating the nusiance at the local mines.*")
+print (" ")
+print ("*Entering the town of Golden Grove, youre approached by the town cheif.*")
+print (" ")
+print ("*He hands you a shovel and points down to the enterance of the cave.*")
+print (" ")
+strength = 2
+shovel = "shovel"
+axe = "axe" 
+give_up = "no"
+inventory = [shovel]
+
+walk_to_cave = str(input("Do you enter the cave?    "))
+print (" ")
+
+if walk_to_cave == "yes":
+    print ("*You walk over to a dark cave*")
+    print (" ")
+else: 
+     print ("the fuck are you waiting for, go")
+     print (" ")
+    
+     while walk_to_cave != "yes":
+        walk_to_cave = str(input("Do you enter the cave?      "))
+        print (" ")
+        if walk_to_cave == "yes":
+            print ("*You walk over to a dark cave*")
+            print (" ")
+            break
+        else: 
+            print ("the fuck are you waiting for, go")
+            print (" ")
+print ("the entrance to the cave is boarded up by old rotting wood. Would you like to try to knock it down with your shovel or look around?")
+print (" ")
+cave_door_decision_1 = str(input("shovel or look around?    "))
+print (" ")
+if cave_door_decision_1 == "shovel":
+    print ("You roll a d20")
+    print (" ")
+    import random 
+    cave_door_decision_1_break_player_roll = random.randint(1,21)
+    print (cave_door_decision_1_break_player_roll)
+    print (" ")
+    if cave_door_decision_1_break_player_roll >= 10:
+        print ("the door breaks down")
+    else:
+        print ("your flimsy baby arms barely did a scratch, try again kiddo")
+elif cave_door_decision_1 == "look around":
+    print ("you see a tree stump with an old axe embeaded in it")
+    print (" ")
+    take_the_axe = str(input("Do you take the axe?  "))
+    print (" ")
+    if take_the_axe == "yes":
+        print ("roll a D20")
+        print (" ")
+        import random
+        take_the_axe_player_roll = random.randint(1,21)
+        print (take_the_axe_player_roll)
+        print (" ")
+        if take_the_axe_player_roll >= 10:
+            inventory.append (axe)
+            print (inventory)
+        else: 
+            print ("its really stuck in there")
+            print (" ")
+            import random 
+            axe_take_fail = str(input("try again?    "))
+            print (" ")
+            if axe_take_fail == "yes":
+                import random
+                take_the_axe_player_roll = random.randint(1,21)
+                print (take_the_axe_player_roll)
+                print (" ")
+                if take_the_axe_player_roll >= 10:
+                    inventory.append (2)
+                    print ("you've gained an axe")
+            if axe_take_fail == "no":
+                give_up = str(input("give up and go home?    "))
+            while axe_take_fail != "yes":
+                if give_up == "yes":
+                    break
+                take_the_axe_player_roll = random.randint(1,21)
+                print (take_the_axe_player_roll)
+if give_up != "yes":
+    print ("test")
+
+                
